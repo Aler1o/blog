@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}" type="text/css">
+    <title>Document</title>
+</head>
+<body class="bob">
+   {% for n in new %}
+        <p class="test">{{ n.title }}</p>
+        <p>{{ n.content }}</p>
+        <p class="leeo">{{ n.author }}</p>
+        <p>{{ n.date_create }}</p>
+        <p>{{ n.date_update }}</p>
+        <hr>
+    {% endfor %}    
+</body>
+</html>
